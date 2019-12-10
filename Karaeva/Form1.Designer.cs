@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -99,9 +99,9 @@
             this.groupBox2.Controls.Add(this.textBox2);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox2.Location = new System.Drawing.Point(862, 122);
+            this.groupBox2.Location = new System.Drawing.Point(824, 122);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(438, 173);
+            this.groupBox2.Size = new System.Drawing.Size(476, 173);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Шкала Чедока";
@@ -114,7 +114,7 @@
             this.textBox2.Margin = new System.Windows.Forms.Padding(30);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(432, 140);
+            this.textBox2.Size = new System.Drawing.Size(470, 140);
             this.textBox2.TabIndex = 9;
             this.textBox2.Text = resources.GetString("textBox2.Text");
             // 
@@ -123,9 +123,9 @@
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox1.Location = new System.Drawing.Point(862, 4);
+            this.groupBox1.Location = new System.Drawing.Point(824, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(438, 118);
+            this.groupBox1.Size = new System.Drawing.Size(476, 118);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Корреляція";
@@ -137,7 +137,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(30);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(432, 85);
+            this.textBox1.Size = new System.Drawing.Size(470, 85);
             this.textBox1.TabIndex = 6;
             // 
             // FirstdataGridView
@@ -157,7 +157,7 @@
             this.FirstdataGridView.Location = new System.Drawing.Point(4, 4);
             this.FirstdataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.FirstdataGridView.Name = "FirstdataGridView";
-            this.FirstdataGridView.Size = new System.Drawing.Size(858, 588);
+            this.FirstdataGridView.Size = new System.Drawing.Size(820, 588);
             this.FirstdataGridView.TabIndex = 1;
             // 
             // Column1
@@ -251,9 +251,9 @@
             this.groupBox3.Controls.Add(this.CorreldataGridView);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox3.Location = new System.Drawing.Point(862, 295);
+            this.groupBox3.Location = new System.Drawing.Point(824, 295);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(438, 297);
+            this.groupBox3.Size = new System.Drawing.Size(476, 297);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Корреляційна матриця";
@@ -266,14 +266,14 @@
             this.CorreldataGridView.AllowUserToResizeRows = false;
             this.CorreldataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.CorreldataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CorreldataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CorreldataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.CorreldataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.CorreldataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column0a,
@@ -289,8 +289,9 @@
             this.CorreldataGridView.Location = new System.Drawing.Point(3, 30);
             this.CorreldataGridView.Name = "CorreldataGridView";
             this.CorreldataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.CorreldataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CorreldataGridView.RowTemplate.Height = 24;
-            this.CorreldataGridView.Size = new System.Drawing.Size(432, 264);
+            this.CorreldataGridView.Size = new System.Drawing.Size(470, 264);
             this.CorreldataGridView.TabIndex = 0;
             // 
             // Column0a
@@ -358,7 +359,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(1200, 700);
+            this.MinimumSize = new System.Drawing.Size(1300, 700);
             this.Name = "Form1";
             this.ShowIcon = false;
             this.Text = "Прорахунок";
