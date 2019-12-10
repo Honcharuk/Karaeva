@@ -54,10 +54,7 @@ namespace Karaeva
                 
                 //Console.WriteLine("Cell {0} has value '{1}'", cell.AddressString, cell.Text);
 
-
                 //Console.WriteLine("Cell {0}:{1} has value '{2}'", i,j, cell.Text);
-
-
                 
                 j++;
                 if (j > 6){
@@ -66,21 +63,45 @@ namespace Karaeva
                 }
             }
 
-            //for (int ia = 0; ia < 26; ia++) {
-            //    for (int ja = 0; ja < 7; ja++) {
-            //        Console.WriteLine("Cell {0}:{1} has value '{2}'", ia, ja, arrayData[ia, ja]);
-            //    }
-            //}
-
-
             for (int ii = 0; ii < 26; ii++)
             {
                 FirstdataGridView.Rows.Add(new object[] { arrayData[ii, 0], arrayData[ii, 1], arrayData[ii, 2], arrayData[ii, 3], arrayData[ii, 4], arrayData[ii, 5], arrayData[ii, 6] });
             }
-        }
+            //заголовки коррел матрицы
+            string text;
+            int pos;
+            string subText;
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+            text = arrayData[0, 1];
+            pos = text.IndexOf('\n');
+            subText = text.Substring(0, pos);
+            CorreldataGridView.Columns[1].HeaderText = subText;
+
+            text = arrayData[0, 2];
+            pos = text.IndexOf('\n');
+            subText = text.Substring(0, pos);
+            CorreldataGridView.Columns[2].HeaderText = subText;
+
+            text = arrayData[0, 3];
+            pos = text.IndexOf('\n');
+            subText = text.Substring(0, pos);
+            CorreldataGridView.Columns[3].HeaderText = subText;
+
+            text = arrayData[0, 4];
+            pos = text.IndexOf('\n');
+            subText = text.Substring(0, pos);
+            CorreldataGridView.Columns[4].HeaderText = subText;
+
+            text = arrayData[0, 5];
+            pos = text.IndexOf('\n');
+            subText = text.Substring(0, pos);
+            CorreldataGridView.Columns[5].HeaderText = subText;
+
+            text = arrayData[0, 6];
+            pos = text.IndexOf('\n');
+            subText = text.Substring(0, pos);
+            CorreldataGridView.Columns[6].HeaderText = subText;
+
 
         }
     }
