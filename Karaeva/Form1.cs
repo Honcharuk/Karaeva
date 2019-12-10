@@ -37,7 +37,7 @@ namespace Karaeva
                 string filename = openFileDialog1.FileName;
                 LadTable(filename);
             }
-            
+
         }
 
         public double ComputeCoeff(double[] values1, double[] values2)
@@ -68,15 +68,15 @@ namespace Karaeva
             int i = 0;
             int j = 0;
 
-            foreach (var cell in sheet["A1:G26"]){
+            foreach (var cell in sheet["A1:G26"]) {
                 arrayData[i, j] = cell.Text;
-                
+
                 //Console.WriteLine("Cell {0} has value '{1}'", cell.AddressString, cell.Text);
 
                 //Console.WriteLine("Cell {0}:{1} has value '{2}'", i,j, cell.Text);
-                
+
                 j++;
-                if (j > 6){
+                if (j > 6) {
                     j = 0;
                     i++;
                 }
@@ -233,7 +233,66 @@ namespace Karaeva
 
                 }
             }
+            // генерируем глупый текст
+            // наименьший колинеарн коеф что к чему
+            // наименьший колинеарн коеф что к чему
+            // ищем наименьшее и наибольшее
+            double smallest = 0;
+            int smallesti = 0;
+            int smallestj = 0;
+            double biggest = 0;
+            int biggesti = 0;
+            int biggestj = 0;
 
+            smallest = correlMatrix[0, 0];
+            biggest = 0;
+            for (int cmi = 0; cmi < 6; cmi++) {
+                for (int cmj = 0; cmj < 6; cmj++) {
+                    if (correlMatrix[cmi, cmj] < smallest) {
+                        smallest = correlMatrix[cmi, cmj];
+                        smallesti = cmi;
+                        smallestj = cmj;
+                    }
+                    if (correlMatrix[cmi, cmj] > biggest && correlMatrix[cmi, cmj] != 1)
+                    {
+                        biggest = correlMatrix[cmi, cmj];
+                        biggesti = cmi;
+                        biggestj = cmj;
+                    }
+                }
+            }
+
+            string conclusion = "Найменший коефіціент: " + Math.Round(smallest, 2) + " " + getSubText(smallesti, subText1, subText2, subText3, subText4, subText5, subText6) + " до " + getSubText(smallestj, subText1, subText2, subText3, subText4, subText5, subText6);
+            conclusion += ", та найбыльший "+ Math.Round(biggest, 2) + " " + getSubText(biggesti, subText1, subText2, subText3, subText4, subText5, subText6) +" до " + getSubText(biggestj, subText1, subText2, subText3, subText4, subText5, subText6);
+
+
+            textBox1.Text = conclusion;
+        }
+
+        public string getSubText(int inputVar, string a, string b, string c, string d, string e, string f) {
+            string result = "";
+            switch (inputVar) {
+                case 0:
+                    result = a;
+                    break;
+                case 1:
+                    result = b;
+                    break;
+                case 2:
+                    result = c;
+                    break;
+                case 3:
+                    result = d;
+                    break;
+                case 4:
+                    result = e;
+                    break;
+                case 5:
+                    result = f;
+                    break;
+            }
+
+            return result;
         }
     }
 }
