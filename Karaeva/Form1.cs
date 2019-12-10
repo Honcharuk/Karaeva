@@ -204,6 +204,35 @@ namespace Karaeva
 
             CorreldataGridView.Rows.Add(new object[] { subText5, Math.Round(correlMatrix[5, 0], 2), Math.Round(correlMatrix[5, 1], 2), Math.Round(correlMatrix[5, 2], 2), Math.Round(correlMatrix[5, 3], 2), Math.Round(correlMatrix[5, 4], 2), Math.Round(correlMatrix[5, 5], 2), Math.Round(correlMatrix[5, 6], 2) });
 
+            //проход по матрице и установка цветов
+            for (int dgi = 0; dgi < 6; dgi++) {
+                for (int dgj = 1; dgj < 7; dgj++) {
+                    if (Convert.ToDouble(CorreldataGridView.Rows[dgi].Cells[dgj].Value) == 1)
+                    {
+                        CorreldataGridView.Rows[dgi].Cells[dgj].Style.BackColor = Color.Firebrick;
+                    }
+                    if (Convert.ToDouble(CorreldataGridView.Rows[dgi].Cells[dgj].Value) < 1) {
+                        CorreldataGridView.Rows[dgi].Cells[dgj].Style.BackColor = Color.ForestGreen;
+                    }
+                    if (Convert.ToDouble(CorreldataGridView.Rows[dgi].Cells[dgj].Value) < 0.9)
+                    {
+                        CorreldataGridView.Rows[dgi].Cells[dgj].Style.BackColor = Color.GreenYellow;
+                    }
+                    if (Convert.ToDouble(CorreldataGridView.Rows[dgi].Cells[dgj].Value) < 0.7)
+                    {
+                        CorreldataGridView.Rows[dgi].Cells[dgj].Style.BackColor = Color.LightPink;
+                    }
+                    if (Convert.ToDouble(CorreldataGridView.Rows[dgi].Cells[dgj].Value) < 0.5)
+                    {
+                        CorreldataGridView.Rows[dgi].Cells[dgj].Style.BackColor = Color.SlateGray;
+                    }
+                    if (Convert.ToDouble(CorreldataGridView.Rows[dgi].Cells[dgj].Value) < 0.3)
+                    {
+                        CorreldataGridView.Rows[dgi].Cells[dgj].Style.BackColor = Color.Tan;
+                    }
+
+                }
+            }
 
         }
     }
