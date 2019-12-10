@@ -45,17 +45,17 @@ namespace Karaeva
             WorkBook workbook = WorkBook.Load(filePath);
             WorkSheet sheet = workbook.WorkSheets.First();
 
-            int cellValue = sheet["A1"].IntValue;
+            //int cellValue = sheet["A1"].IntValue;
             int i = 0;
             int j = 0;
 
             foreach (var cell in sheet["A1:G26"]){
                 arrayData[i, j] = cell.Text;
                 
-                Console.WriteLine("Cell {0} has value '{1}'", cell.AddressString, cell.Text);
+                //Console.WriteLine("Cell {0} has value '{1}'", cell.AddressString, cell.Text);
 
 
-                Console.WriteLine("Cell {0}:{1} has value '{2}'", i,j, cell.Text);
+                //Console.WriteLine("Cell {0}:{1} has value '{2}'", i,j, cell.Text);
 
 
                 
@@ -65,10 +65,23 @@ namespace Karaeva
                     i++;
                 }
             }
-            for (int ii = 0; ii < 25; ii++)
+
+            //for (int ia = 0; ia < 26; ia++) {
+            //    for (int ja = 0; ja < 7; ja++) {
+            //        Console.WriteLine("Cell {0}:{1} has value '{2}'", ia, ja, arrayData[ia, ja]);
+            //    }
+            //}
+
+
+            for (int ii = 0; ii < 26; ii++)
             {
-                FirstdataGridView.Rows.Add(new object[] { arrayData[ii, 0], arrayData[ii, 1], arrayData[ii, 2], arrayData[ii, 3], arrayData[ii, 4], arrayData[ii, 5]});
+                FirstdataGridView.Rows.Add(new object[] { arrayData[ii, 0], arrayData[ii, 1], arrayData[ii, 2], arrayData[ii, 3], arrayData[ii, 4], arrayData[ii, 5], arrayData[ii, 6] });
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
